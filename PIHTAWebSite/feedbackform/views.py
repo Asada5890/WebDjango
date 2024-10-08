@@ -7,14 +7,14 @@ def send_mail_page(request):
     context = {}
 
     if request.method == 'POST':
-        address = 'artemprudnikov907@gmail.com'
-        subject = request.POST.get('subject')
+        address = 'soldatenco96@mail.ru'
+        phonenumber = request.POST.get('phonenumber')
         message = request.POST.get('message')
 
-        if subject and message:
+        if phonenumber and message:
             try:
-                send_mail(subject, message, settings.EMAIL_HOST_USER, [address])
-                context['result'] = 'Email sent successfully'
+                send_mail(phonenumber ,message, settings.EMAIL_HOST_USER, [address])
+                context['result'] = 'Ваша заявка отправлена!'
             except Exception as e:
                 context['result'] = f'Error sending email: {e}'
         else:

@@ -123,21 +123,21 @@ STATIC_URL = '/static/'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'feedbackform.backends.email_backend.EmailBackend'
-# EMAIL_HOST = 'smtp.yandex.ru'
-# EMAIL_PORT = 465
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = True
-# EMAIL_HOST_USER = 'maxim481.soldat@yandex.ru'
-# EMAIL_HOST_PASSWORD = '#'
-
-
-
-EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_PORT = 2525
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-EMAIL_HOST_USER = 'soldatenco96@mail.ru'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'maxim481.soldat@yandex.ru'
 EMAIL_HOST_PASSWORD = '#'
+
+
+
+# EMAIL_HOST = 'smtp.mail.ru'
+# EMAIL_PORT = 2525
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+# EMAIL_HOST_USER = 'soldatenco96@mail.ru'
+# EMAIL_HOST_PASSWORD = '#'
 
 
 # EMAIL_HOST = 'smtp.gmail.com'
