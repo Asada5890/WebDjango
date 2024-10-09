@@ -29,7 +29,7 @@
                 <li><a href="#first-section">Главная</a></li>
                 <li><a href="#second-section">О нас</a></li>
                 <li><a href="#third-section">Характеристи</a></li>
-                <li><a href="#fourth-section">Контакты</a></li>
+                <li><a href="#fifth-section">Контакты</a></li>
               </ul>
             </div>
           </nav>
@@ -161,7 +161,7 @@
         </div>
         <div class="block-three">
           <div class="block-three-img">
-            <img src="{% static 'img/img2png' %}.png" alt="" />
+            <img src="{% static 'img/img2.png' %}" alt="" />
             <img src="{% static 'img/img3.png' %}" alt="" />
           </div>
         </div>
@@ -248,10 +248,10 @@
         <form method="post">
             {% csrf_token %}
 
-            <label for="phonenumber">Номер:</label>
-            <input id="phonenumber" name="phonenumber"/>
+            <label type='phonenumber' for="phonenumber"><strong>Номер для обратной связи:</strong></label>
+            <input maxlength="18"  type='tel'pattern="+7[0-9]{10}" placeholder="+7" id="phonenumber" name="phonenumber"/>
         
-            <label for="message">Коментарий:</label><br>
+            <label class = "coment" for="message">Коментарий:</label><br>
             <textarea id="message" name="message"></textarea>
 
             <input type="submit">
@@ -262,6 +262,7 @@
     <script src="{% static 'js/right-left-animation.js' %}"></script>
     <script src="{% static 'js/visile-section.js' %}"></script>
     <script src="{% static 'js/navigation.js' %}"></script>
+    <script src="{% static 'js/phone_number.js' %}"></script>
 
     <!-- <script src="../static/js/appear-text.js"></script>
     <script src="../static/js/burger.js"></script>

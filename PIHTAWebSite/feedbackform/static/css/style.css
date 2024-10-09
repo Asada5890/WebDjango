@@ -34,6 +34,51 @@ header {
         .navbar .nav-list ul li:hover {
           transition: transform 0.3s ease;
           transform: scale(1.1); }
+
+
+          @media (max-width: 480px) {
+            header .main-text-header {
+              display: flex;
+              color: white;
+              flex-wrap: wrap;
+              justify-content: space-around;
+              width: 90%;
+              margin: 0 20px; /* центрирование блока */
+              padding: 20px 0; /* добавление отступов сверху и снизу */
+              align-items: center;
+            }
+            
+            header .main-text-header .left-text-block {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              margin-top: 30px;
+              animation: fadeIn 1.7s ease-in-out;
+            }
+            
+            header .main-text-header .left-text-block .left-text {
+              width: 70%;
+              min-width: 300px;
+              font-size: 26px;
+            }
+            
+            header .main-text-header .right-text-block {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              animation: fadeIn 1.7s ease-in-out;
+            }
+            
+            header .main-text-header .right-text-block .right-text {
+              width: 75%;
+              font-size: 40px;
+            }
+          }
+          
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
   
   @keyframes fadeIn {
     from {
@@ -103,6 +148,52 @@ header {
               header .main-text-header .right-text-block {
                 margin-bottom: 70px; 
               }
+            }
+
+            @media (max-width: 480px) {
+              header {
+                .main-text-header {
+                  display: flex;
+                  color: white;
+                  flex-wrap: wrap;
+                  justify-content: space-around;
+                  width: 90%;
+                  margin: 0 20px; /* центрирование блока */
+                  padding: 20px 0; /* добавление отступов сверху и снизу */
+                  align-items: center;
+                  
+                  .left-text-block {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 30px;
+                    animation: fadeIn 1.7s ease-in-out;
+                    
+                    .left-text {
+                      width: 70%;
+                      min-width: 300px;
+                      font-size: 26px;
+                    }
+                  }
+                  
+                  .right-text-block {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    animation: fadeIn 1.7s ease-in-out;
+                    
+                    .right-text {
+                      width: 75%;
+                      font-size: 40px;
+                    }
+                  }
+                }
+              }
+            }
+            
+            @keyframes fadeIn {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
             }
             
             body.no-scroll {
@@ -349,7 +440,7 @@ header {
   /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-  [type='number']::-webkit-inner-spin-button,
+  /* [type='number']::-webkit-inner-spin-button,
   [type='number']::- webkit-outer-spin-button {
     height: auto; }
   
@@ -357,11 +448,11 @@ header {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-  [type='search'] {
-    -webkit-appearance: textfield;
+  /* [type='search'] {
+    /* -webkit-appearance: textfield; */ */
     /* 1 */
-    outline-offset: -2px;
-    /* 2 */ }
+    /* outline-offset: -2px; */
+    /* 2 */ 
   
   /**
    * Remove the inner padding in Chrome and Safari on macOS.
@@ -479,6 +570,22 @@ header {
       justify-content: end;
       margin-right: 40px;
       margin-left: 20px; }
+
+      @media (max-width: 380px) {
+        .first-section {
+          display: flex;
+          justify-content: center;
+        }
+        .first-section .block-one {
+          min-width: 230px;
+        }
+        .first-section .block-one h2 {
+          font-size: 24px;
+        }
+        .first-section .block-one .block-one-text {
+          font-size: 14px;
+        }
+      }
   
   @media (min-width: 300px) and (max-width: 1000px) {
     .first-section .block-one .block-one-text {
@@ -746,46 +853,93 @@ header {
         margin-top: 20px;
         width: 200px;
         height: 200px; } }
-  footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 30px 0;
-    background: url(../img/footer.png) no-repeat;
-    background-size: cover; }
-    footer form {
-      backdrop-filter: blur(5px);
-      font-size: 22px;
-      padding: 30px;
-      padding-right: 50px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.588);
-      width: 100%;
-      max-width: 400px; }
-    footer label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold; }
-    footer input[type='text'],
-    footer input[type='email'],
-    footer textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px; }
-    footer textarea {
-      resize: none; }
-    footer button {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease; }
-    footer button:hover {
-      background-color: #0056b3; }
+        footer {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: 0 auto;
+          color: white;
+          padding: 30px 0;
+          background: url(../img/footer.png) no-repeat;
+          background-size: cover;
+          font-family: Arial, sans-serif;
+        }
+        
+        footer form {
+          backdrop-filter: blur(5px);
+          font-size: 18px;
+          padding: 30px;
+          padding-right: 50px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.588);
+          width: 100%;
+          max-width: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        footer label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+          text-align: center;
+        }
+        
+        footer label[for='message'] {
+          margin-bottom: 2px; /* Reduced margin-bottom to 2px */
+        }
+        
+        footer input[type='text'],
+        footer input[type='tel'] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 10px; /* Added border-radius for rounded corners */
+          font-size: 16px;
+          box-sizing: border-box;
+        }
+        
+        footer textarea {
+          resize: none;
+          height: 100px;
+          margin-bottom: 20px;
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          font-size: 16px;
+          box-sizing: border-box;
+          font-family: 'Open Sans', sans-serif;
+          margin-top: 10px; /* Adjusted margin-top to 10px */
+        }
+        
+        footer input[type='submit'] {
+          background-color: #007bff;
+          color: #fff;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+          margin-top: 20px;
+        }
+        
+        footer input[type='submit']:hover {
+          background-color: #0056b3;
+        }
+        
+        footer p {
+          text-align: center;
+          margin-top: 20px;
+
+        }
+
+
+        input[type="tel"] {
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+        }
