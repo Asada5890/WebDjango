@@ -13,11 +13,11 @@ def send_mail_page(request):
 
         if phonenumber and message:
             try:
-                send_mail(phonenumber ,message, settings.EMAIL_HOST_USER, [address])
+                send_mail(phonenumber, message, settings.EMAIL_HOST_USER, [address])
                 context['result'] = 'Ваша заявка отправлена!'
             except Exception as e:
-                context['result'] = f'Error sending email: {e}'
+                context['result'] = f'Ошибка отправки письма: {e}'
         else:
-            context['result'] = 'All fields are required'
+            context['result'] = 'Заполните все поля !'
     
     return render(request, "index.html", context)
